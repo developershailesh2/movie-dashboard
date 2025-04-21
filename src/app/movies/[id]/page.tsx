@@ -1,6 +1,4 @@
-"use client";
-
-import { useRouter } from "next/navigation";
+import Link from "next/link";
 import { FaStar } from "react-icons/fa6";
 
 interface MovieProps {
@@ -10,8 +8,6 @@ interface MovieProps {
 }
 
 export default function MovieDetails({ params }: MovieProps) {
-  const router = useRouter();
-
   const movies = [
     {
       id: "1",
@@ -388,12 +384,12 @@ export default function MovieDetails({ params }: MovieProps) {
         </ul>
       </div>
       <div className="flex items-center justify-end">
-        <button
+        <Link
+          href={"/"}
           className="text-white p-3 rounded-lg font-semibold cursor-pointer bg-red-600"
-          onClick={() => router.back()}
         >
           Back
-        </button>
+        </Link>
       </div>
     </div>
   );
