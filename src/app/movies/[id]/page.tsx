@@ -1,13 +1,12 @@
 import Link from "next/link";
 import { FaStar } from "react-icons/fa6";
 
-interface MovieProps {
-  params: {
-    id: string;
-  };
+interface MoviePageProps {
+  params: { id: string };
 }
 
-export default function MovieDetails({ params }: MovieProps) {
+
+export default function MovieDetails({ params }: MoviePageProps) {
   const movies = [
     {
       id: "1",
